@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+box-sizing: border-box;
+min-width: 200px;
+max-width: 980px;
+margin: 0 auto;
+padding: 45px;
+padding-top: 0px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="normalizations-comparisons">Normalizations Comparisons</h1>
+<p>Load libraries</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(SurprisalAnalysis)</span></code></pre></div>
+<pre><code>## 
+
+## 
+
+## </code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span></code></pre></div>
+<p>Let us test the normalization methods here pseudocount vs log1p</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">#&#39; Plot Bland Altman and density plots of the difference between the two zero handling</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&#39; methods</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="co">#&#39; @param aa the gene expression matrix</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a><span class="co">#&#39; @param pc the pseudocount</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="co">#&#39;</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="co">#&#39; @return two plots, the Bland Altman plot and the density plot</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>plot.norm.diffs <span class="ot">&lt;-</span> <span class="cf">function</span>(X, pc){</span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a>  mat_logpc <span class="ot">&lt;-</span> <span class="fu">log</span>(X <span class="sc">+</span> pc)</span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>  mat_log1p <span class="ot">&lt;-</span> <span class="fu">log1p</span>(X)</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>  avg_vals  <span class="ot">&lt;-</span> (mat_logpc <span class="sc">+</span> mat_log1p) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>  diff_vals <span class="ot">&lt;-</span> mat_logpc <span class="sc">-</span> mat_log1p</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>  df_ba <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>    <span class="at">Avg  =</span> <span class="fu">as.vector</span>(avg_vals),</span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>    <span class="at">Diff =</span> <span class="fu">as.vector</span>(diff_vals)</span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>  )</span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a>  p_ba <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df_ba, <span class="fu">aes</span>(<span class="at">x =</span> Avg, <span class="at">y =</span> Diff)) <span class="sc">+</span></span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">0.8</span>, <span class="at">color =</span> <span class="st">&quot;darkred&quot;</span>) <span class="sc">+</span></span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;navy&quot;</span>) <span class="sc">+</span></span>
+<span id="cb4-26"><a href="#cb4-26" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb4-27"><a href="#cb4-27" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">&quot;Bland–Altman Plot&quot;</span>,</span>
+<span id="cb4-28"><a href="#cb4-28" tabindex="-1"></a>      <span class="at">subtitle =</span> <span class="st">&quot;log(x+1e-6) vs log1p(x)&quot;</span>,</span>
+<span id="cb4-29"><a href="#cb4-29" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">&quot;Average of two transforms&quot;</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">&quot;Difference (log(x+1e-6) - log1p(x))&quot;</span></span>
+<span id="cb4-31"><a href="#cb4-31" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb4-32"><a href="#cb4-32" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb4-33"><a href="#cb4-33" tabindex="-1"></a>      <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-34"><a href="#cb4-34" tabindex="-1"></a>      <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-35"><a href="#cb4-35" tabindex="-1"></a>      <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-36"><a href="#cb4-36" tabindex="-1"></a>      <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb4-37"><a href="#cb4-37" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb4-38"><a href="#cb4-38" tabindex="-1"></a>      <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb4-39"><a href="#cb4-39" tabindex="-1"></a>      <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb4-40"><a href="#cb4-40" tabindex="-1"></a>    )</span>
+<span id="cb4-41"><a href="#cb4-41" tabindex="-1"></a></span>
+<span id="cb4-42"><a href="#cb4-42" tabindex="-1"></a></span>
+<span id="cb4-43"><a href="#cb4-43" tabindex="-1"></a>  df_diff <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Diff =</span> <span class="fu">as.vector</span>(diff_vals))</span>
+<span id="cb4-44"><a href="#cb4-44" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" tabindex="-1"></a>  p_density <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df_diff, <span class="fu">aes</span>(<span class="at">x =</span> Diff)) <span class="sc">+</span></span>
+<span id="cb4-46"><a href="#cb4-46" tabindex="-1"></a>    <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(scaled)), <span class="at">fill =</span> <span class="st">&quot;steelblue&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb4-47"><a href="#cb4-47" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;navy&quot;</span>) <span class="sc">+</span></span>
+<span id="cb4-48"><a href="#cb4-48" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb4-49"><a href="#cb4-49" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">&quot;Distribution of Differences&quot;</span>,</span>
+<span id="cb4-50"><a href="#cb4-50" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">&quot;Difference (log(x+1e-6) - log1p(x))&quot;</span>,</span>
+<span id="cb4-51"><a href="#cb4-51" tabindex="-1"></a>      <span class="at">y =</span> <span class="st">&quot;Density&quot;</span></span>
+<span id="cb4-52"><a href="#cb4-52" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb4-53"><a href="#cb4-53" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb4-54"><a href="#cb4-54" tabindex="-1"></a>      <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-55"><a href="#cb4-55" tabindex="-1"></a>      <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-56"><a href="#cb4-56" tabindex="-1"></a>      <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb4-57"><a href="#cb4-57" tabindex="-1"></a>      <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb4-58"><a href="#cb4-58" tabindex="-1"></a>      <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb4-59"><a href="#cb4-59" tabindex="-1"></a>      <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb4-60"><a href="#cb4-60" tabindex="-1"></a>      <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb4-61"><a href="#cb4-61" tabindex="-1"></a>    )</span>
+<span id="cb4-62"><a href="#cb4-62" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="#cb4-63" tabindex="-1"></a>  <span class="fu">return</span>(p_ba <span class="sc">+</span> p_density)</span>
+<span id="cb4-64"><a href="#cb4-64" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co">#pseudocount</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>pc <span class="ot">&lt;-</span> <span class="fl">1e-6</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="fu">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;GSE60450_Lactation-GenewiseCounts.txt&quot;</span>, <span class="at">package =</span> <span class="st">&quot;SurprisalAnalysis&quot;</span>),<span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\t</span><span class="st">&quot;</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>  </span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>df[,<span class="dv">3</span><span class="sc">:</span><span class="fu">ncol</span>(df)]<span class="ot">-&gt;</span>testing.case<span class="fl">.1</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>df<span class="sc">$</span>EntrezGeneID<span class="ot">-&gt;</span><span class="fu">rownames</span>(testing.case<span class="fl">.1</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="fu">as.matrix</span>(testing.case<span class="fl">.1</span>)<span class="ot">-&gt;</span>testing.case<span class="fl">.1</span></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">all</span>(<span class="fu">c</span>(<span class="st">&quot;EntrezGeneID&quot;</span>,<span class="st">&quot;Length&quot;</span>) <span class="sc">%in%</span> <span class="fu">names</span>(df)))</span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>gene_ids <span class="ot">&lt;-</span> df<span class="sc">$</span>EntrezGeneID</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>len_bp   <span class="ot">&lt;-</span> df<span class="sc">$</span>Length</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>counts   <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(df[ , <span class="sc">-</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>)])</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>keep <span class="ot">&lt;-</span> <span class="fu">is.finite</span>(len_bp) <span class="sc">&amp;</span> (len_bp <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a>counts <span class="ot">&lt;-</span> counts[keep, , drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a>len_bp <span class="ot">&lt;-</span> len_bp[keep]</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>gene_ids <span class="ot">&lt;-</span> gene_ids[keep]</span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a><span class="fu">rownames</span>(counts) <span class="ot">&lt;-</span> gene_ids</span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a>len_kb <span class="ot">&lt;-</span> len_bp <span class="sc">/</span> <span class="dv">1000</span></span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a><span class="co">#FPKM</span></span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a><span class="co">#FPKM_ij = counts_ij / (len_kb_i * libsize_j_in_millions)</span></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>libsize        <span class="ot">&lt;-</span> <span class="fu">colSums</span>(counts, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a>libsize_mill   <span class="ot">&lt;-</span> libsize <span class="sc">/</span> <span class="fl">1e6</span></span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a>fpkm <span class="ot">&lt;-</span> <span class="fu">sweep</span>(counts, <span class="dv">1</span>, len_kb, <span class="st">&quot;/&quot;</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" tabindex="-1"></a>fpkm <span class="ot">&lt;-</span> <span class="fu">sweep</span>(fpkm, <span class="dv">2</span>, libsize_mill, <span class="st">&quot;/&quot;</span>)</span>
+<span id="cb5-40"><a href="#cb5-40" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" tabindex="-1"></a><span class="co">#TPM</span></span>
+<span id="cb5-42"><a href="#cb5-42" tabindex="-1"></a><span class="co"># TPM_ij = (counts_ij / len_kb_i) / sum_i(counts_ij / len_kb_i) * 1e6</span></span>
+<span id="cb5-43"><a href="#cb5-43" tabindex="-1"></a>rpk  <span class="ot">&lt;-</span> <span class="fu">sweep</span>(counts, <span class="dv">1</span>, len_kb, <span class="st">&quot;/&quot;</span>)</span>
+<span id="cb5-44"><a href="#cb5-44" tabindex="-1"></a>scale <span class="ot">&lt;-</span> <span class="fu">colSums</span>(rpk, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-45"><a href="#cb5-45" tabindex="-1"></a>tpm <span class="ot">&lt;-</span> <span class="fu">sweep</span>(rpk, <span class="dv">2</span>, scale, <span class="st">&quot;/&quot;</span>) <span class="sc">*</span> <span class="fl">1e6</span></span>
+<span id="cb5-46"><a href="#cb5-46" tabindex="-1"></a></span>
+<span id="cb5-47"><a href="#cb5-47" tabindex="-1"></a>testing.case<span class="fl">.2</span> <span class="ot">&lt;-</span> fpkm</span>
+<span id="cb5-48"><a href="#cb5-48" tabindex="-1"></a>testing.case<span class="fl">.3</span> <span class="ot">&lt;-</span> tpm</span>
+<span id="cb5-49"><a href="#cb5-49" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" tabindex="-1"></a><span class="fu">plot.norm.diffs</span>(testing.case<span class="fl">.1</span>, pc)</span>
+<span id="cb5-51"><a href="#cb5-51" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" tabindex="-1"></a><span class="fu">plot.norm.diffs</span>(testing.case<span class="fl">.2</span>, pc)</span>
+<span id="cb5-53"><a href="#cb5-53" tabindex="-1"></a></span>
+<span id="cb5-54"><a href="#cb5-54" tabindex="-1"></a><span class="fu">plot.norm.diffs</span>(testing.case<span class="fl">.3</span>, pc)</span>
+<span id="cb5-55"><a href="#cb5-55" tabindex="-1"></a></span>
+<span id="cb5-56"><a href="#cb5-56" tabindex="-1"></a></span>
+<span id="cb5-57"><a href="#cb5-57" tabindex="-1"></a></span>
+<span id="cb5-58"><a href="#cb5-58" tabindex="-1"></a>baseline <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">raw =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.1</span>)[[<span class="dv">1</span>]][,<span class="dv">1</span>],</span>
+<span id="cb5-59"><a href="#cb5-59" tabindex="-1"></a>           <span class="at">fpkm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.2</span>)[[<span class="dv">1</span>]][,<span class="dv">1</span>],</span>
+<span id="cb5-60"><a href="#cb5-60" tabindex="-1"></a>           <span class="at">tpm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.3</span>)[[<span class="dv">1</span>]][,<span class="dv">1</span>])</span>
+<span id="cb5-61"><a href="#cb5-61" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" tabindex="-1"></a></span>
+<span id="cb5-63"><a href="#cb5-63" tabindex="-1"></a>baseline.pseudo <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(baseline)<span class="sc">+</span></span>
+<span id="cb5-64"><a href="#cb5-64" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-65"><a href="#cb5-65" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-66"><a href="#cb5-66" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">color =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-67"><a href="#cb5-67" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">colour =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-68"><a href="#cb5-68" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>,)<span class="sc">+</span></span>
+<span id="cb5-69"><a href="#cb5-69" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-70"><a href="#cb5-70" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-71"><a href="#cb5-71" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-72"><a href="#cb5-72" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-73"><a href="#cb5-73" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-74"><a href="#cb5-74" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-75"><a href="#cb5-75" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-76"><a href="#cb5-76" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-77"><a href="#cb5-77" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb5-78"><a href="#cb5-78" tabindex="-1"></a>  )<span class="sc">+</span></span>
+<span id="cb5-79"><a href="#cb5-79" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
+<span id="cb5-80"><a href="#cb5-80" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_0$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-81"><a href="#cb5-81" tabindex="-1"></a></span>
+<span id="cb5-82"><a href="#cb5-82" tabindex="-1"></a></span>
+<span id="cb5-83"><a href="#cb5-83" tabindex="-1"></a>baseline.pseudo</span>
+<span id="cb5-84"><a href="#cb5-84" tabindex="-1"></a></span>
+<span id="cb5-85"><a href="#cb5-85" tabindex="-1"></a>lambda_1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">raw =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.1</span>)[[<span class="dv">1</span>]][,<span class="dv">2</span>],</span>
+<span id="cb5-86"><a href="#cb5-86" tabindex="-1"></a>                       <span class="at">fpkm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.2</span>)[[<span class="dv">1</span>]][,<span class="dv">2</span>],</span>
+<span id="cb5-87"><a href="#cb5-87" tabindex="-1"></a>                       <span class="at">tpm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.3</span>)[[<span class="dv">1</span>]][,<span class="dv">2</span>])</span>
+<span id="cb5-88"><a href="#cb5-88" tabindex="-1"></a></span>
+<span id="cb5-89"><a href="#cb5-89" tabindex="-1"></a></span>
+<span id="cb5-90"><a href="#cb5-90" tabindex="-1"></a>lambda_1.pseudo <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(lambda_1)<span class="sc">+</span></span>
+<span id="cb5-91"><a href="#cb5-91" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-92"><a href="#cb5-92" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-93"><a href="#cb5-93" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">color =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-94"><a href="#cb5-94" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">colour =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-95"><a href="#cb5-95" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>,)<span class="sc">+</span></span>
+<span id="cb5-96"><a href="#cb5-96" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-97"><a href="#cb5-97" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-98"><a href="#cb5-98" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-99"><a href="#cb5-99" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-100"><a href="#cb5-100" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-101"><a href="#cb5-101" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-102"><a href="#cb5-102" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-103"><a href="#cb5-103" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-104"><a href="#cb5-104" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb5-105"><a href="#cb5-105" tabindex="-1"></a>  )<span class="sc">+</span></span>
+<span id="cb5-106"><a href="#cb5-106" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
+<span id="cb5-107"><a href="#cb5-107" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_1$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-108"><a href="#cb5-108" tabindex="-1"></a></span>
+<span id="cb5-109"><a href="#cb5-109" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="#cb5-110" tabindex="-1"></a>lambda_1.pseudo</span>
+<span id="cb5-111"><a href="#cb5-111" tabindex="-1"></a></span>
+<span id="cb5-112"><a href="#cb5-112" tabindex="-1"></a>lambda_2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">raw =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.1</span>)[[<span class="dv">1</span>]][,<span class="dv">3</span>],</span>
+<span id="cb5-113"><a href="#cb5-113" tabindex="-1"></a>                       <span class="at">fpkm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.2</span>)[[<span class="dv">1</span>]][,<span class="dv">3</span>],</span>
+<span id="cb5-114"><a href="#cb5-114" tabindex="-1"></a>                       <span class="at">tpm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.3</span>)[[<span class="dv">1</span>]][,<span class="dv">3</span>])</span>
+<span id="cb5-115"><a href="#cb5-115" tabindex="-1"></a></span>
+<span id="cb5-116"><a href="#cb5-116" tabindex="-1"></a></span>
+<span id="cb5-117"><a href="#cb5-117" tabindex="-1"></a>lambda_2.pseudo <span class="ot">&lt;-</span>   <span class="fu">ggplot</span>(lambda_2)<span class="sc">+</span></span>
+<span id="cb5-118"><a href="#cb5-118" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-119"><a href="#cb5-119" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-120"><a href="#cb5-120" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">color =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-121"><a href="#cb5-121" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">colour =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-122"><a href="#cb5-122" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>,)<span class="sc">+</span></span>
+<span id="cb5-123"><a href="#cb5-123" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-124"><a href="#cb5-124" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-125"><a href="#cb5-125" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-126"><a href="#cb5-126" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-127"><a href="#cb5-127" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-128"><a href="#cb5-128" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-129"><a href="#cb5-129" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-130"><a href="#cb5-130" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-131"><a href="#cb5-131" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb5-132"><a href="#cb5-132" tabindex="-1"></a>  )<span class="sc">+</span></span>
+<span id="cb5-133"><a href="#cb5-133" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
+<span id="cb5-134"><a href="#cb5-134" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_2$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-135"><a href="#cb5-135" tabindex="-1"></a></span>
+<span id="cb5-136"><a href="#cb5-136" tabindex="-1"></a></span>
+<span id="cb5-137"><a href="#cb5-137" tabindex="-1"></a>lambda_2.pseudo</span>
+<span id="cb5-138"><a href="#cb5-138" tabindex="-1"></a></span>
+<span id="cb5-139"><a href="#cb5-139" tabindex="-1"></a></span>
+<span id="cb5-140"><a href="#cb5-140" tabindex="-1"></a>baseline <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">raw =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.1</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">1</span>],</span>
+<span id="cb5-141"><a href="#cb5-141" tabindex="-1"></a>                       <span class="at">fpkm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.2</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">1</span>],</span>
+<span id="cb5-142"><a href="#cb5-142" tabindex="-1"></a>                       <span class="at">tpm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.3</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">1</span>])</span>
+<span id="cb5-143"><a href="#cb5-143" tabindex="-1"></a></span>
+<span id="cb5-144"><a href="#cb5-144" tabindex="-1"></a></span>
+<span id="cb5-145"><a href="#cb5-145" tabindex="-1"></a>baseline.log1p <span class="ot">&lt;-</span>  <span class="fu">ggplot</span>(baseline)<span class="sc">+</span></span>
+<span id="cb5-146"><a href="#cb5-146" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-147"><a href="#cb5-147" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-148"><a href="#cb5-148" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">color =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-149"><a href="#cb5-149" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">colour =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-150"><a href="#cb5-150" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>,)<span class="sc">+</span></span>
+<span id="cb5-151"><a href="#cb5-151" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-152"><a href="#cb5-152" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-153"><a href="#cb5-153" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-154"><a href="#cb5-154" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-155"><a href="#cb5-155" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-156"><a href="#cb5-156" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-157"><a href="#cb5-157" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-158"><a href="#cb5-158" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-159"><a href="#cb5-159" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb5-160"><a href="#cb5-160" tabindex="-1"></a>  )<span class="sc">+</span></span>
+<span id="cb5-161"><a href="#cb5-161" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
+<span id="cb5-162"><a href="#cb5-162" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_0$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-163"><a href="#cb5-163" tabindex="-1"></a></span>
+<span id="cb5-164"><a href="#cb5-164" tabindex="-1"></a></span>
+<span id="cb5-165"><a href="#cb5-165" tabindex="-1"></a>baseline.log1p</span>
+<span id="cb5-166"><a href="#cb5-166" tabindex="-1"></a></span>
+<span id="cb5-167"><a href="#cb5-167" tabindex="-1"></a>lambda_1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">raw =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.1</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">2</span>],</span>
+<span id="cb5-168"><a href="#cb5-168" tabindex="-1"></a>                       <span class="at">fpkm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.2</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">2</span>],</span>
+<span id="cb5-169"><a href="#cb5-169" tabindex="-1"></a>                       <span class="at">tpm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.3</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">2</span>])</span>
+<span id="cb5-170"><a href="#cb5-170" tabindex="-1"></a></span>
+<span id="cb5-171"><a href="#cb5-171" tabindex="-1"></a></span>
+<span id="cb5-172"><a href="#cb5-172" tabindex="-1"></a>lambda_1.log1p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(lambda_1)<span class="sc">+</span></span>
+<span id="cb5-173"><a href="#cb5-173" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-174"><a href="#cb5-174" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-175"><a href="#cb5-175" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">color =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-176"><a href="#cb5-176" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">colour =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-177"><a href="#cb5-177" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>,)<span class="sc">+</span></span>
+<span id="cb5-178"><a href="#cb5-178" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-179"><a href="#cb5-179" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-180"><a href="#cb5-180" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-181"><a href="#cb5-181" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-182"><a href="#cb5-182" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-183"><a href="#cb5-183" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-184"><a href="#cb5-184" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-185"><a href="#cb5-185" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-186"><a href="#cb5-186" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb5-187"><a href="#cb5-187" tabindex="-1"></a>  )<span class="sc">+</span></span>
+<span id="cb5-188"><a href="#cb5-188" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
+<span id="cb5-189"><a href="#cb5-189" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_1$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-190"><a href="#cb5-190" tabindex="-1"></a></span>
+<span id="cb5-191"><a href="#cb5-191" tabindex="-1"></a></span>
+<span id="cb5-192"><a href="#cb5-192" tabindex="-1"></a>lambda_1.log1p</span>
+<span id="cb5-193"><a href="#cb5-193" tabindex="-1"></a></span>
+<span id="cb5-194"><a href="#cb5-194" tabindex="-1"></a></span>
+<span id="cb5-195"><a href="#cb5-195" tabindex="-1"></a>lambda_2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">raw =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.1</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">3</span>],</span>
+<span id="cb5-196"><a href="#cb5-196" tabindex="-1"></a>                       <span class="at">fpkm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.2</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">3</span>],</span>
+<span id="cb5-197"><a href="#cb5-197" tabindex="-1"></a>                       <span class="at">tpm =</span> <span class="fu">surprisal_analysis</span>(testing.case<span class="fl">.3</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">1</span>]][,<span class="dv">3</span>])</span>
+<span id="cb5-198"><a href="#cb5-198" tabindex="-1"></a></span>
+<span id="cb5-199"><a href="#cb5-199" tabindex="-1"></a></span>
+<span id="cb5-200"><a href="#cb5-200" tabindex="-1"></a>lambda_2.log1p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(lambda_2)<span class="sc">+</span></span>
+<span id="cb5-201"><a href="#cb5-201" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-202"><a href="#cb5-202" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>raw, <span class="at">colour=</span><span class="st">&quot;Raw&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-203"><a href="#cb5-203" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">color =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-204"><a href="#cb5-204" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>fpkm, <span class="at">colour =</span> <span class="st">&quot;FPKM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-205"><a href="#cb5-205" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">size=</span><span class="dv">1</span>,)<span class="sc">+</span></span>
+<span id="cb5-206"><a href="#cb5-206" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(baseline), <span class="at">y=</span>tpm, <span class="at">colour=</span><span class="st">&quot;TPM Normalized&quot;</span>), <span class="at">shape=</span><span class="dv">8</span>, <span class="at">stroke=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb5-207"><a href="#cb5-207" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-208"><a href="#cb5-208" tabindex="-1"></a>    <span class="at">panel.grid.major =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-209"><a href="#cb5-209" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-210"><a href="#cb5-210" tabindex="-1"></a>    <span class="at">panel.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-211"><a href="#cb5-211" tabindex="-1"></a>    <span class="at">axis.line =</span> <span class="fu">element_line</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb5-212"><a href="#cb5-212" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb5-213"><a href="#cb5-213" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb5-214"><a href="#cb5-214" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
+<span id="cb5-215"><a href="#cb5-215" tabindex="-1"></a>  )<span class="sc">+</span></span>
+<span id="cb5-216"><a href="#cb5-216" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
+<span id="cb5-217"><a href="#cb5-217" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_2$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-218"><a href="#cb5-218" tabindex="-1"></a></span>
+<span id="cb5-219"><a href="#cb5-219" tabindex="-1"></a></span>
+<span id="cb5-220"><a href="#cb5-220" tabindex="-1"></a>lambda_2.log1p</span>
+<span id="cb5-221"><a href="#cb5-221" tabindex="-1"></a></span>
+<span id="cb5-222"><a href="#cb5-222" tabindex="-1"></a><span class="co">#(baseline.pseudo+baseline.log1p)/(lambda.1.pseudo+lambda.1.log1p)/(lambda_2.pseudo+lambda_2.log1p)</span></span>
+<span id="cb5-223"><a href="#cb5-223" tabindex="-1"></a></span>
+<span id="cb5-224"><a href="#cb5-224" tabindex="-1"></a></span>
+<span id="cb5-225"><a href="#cb5-225" tabindex="-1"></a></span>
+<span id="cb5-226"><a href="#cb5-226" tabindex="-1"></a></span>
+<span id="cb5-227"><a href="#cb5-227" tabindex="-1"></a></span>
+<span id="cb5-228"><a href="#cb5-228" tabindex="-1"></a></span>
+<span id="cb5-229"><a href="#cb5-229" tabindex="-1"></a>running.test.case<span class="fl">.1</span><span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Sample =</span> <span class="fu">as.numeric</span>(<span class="fu">rownames</span>(testing.case<span class="fl">.1</span>)), testing.case<span class="fl">.1</span>)</span>
+<span id="cb5-230"><a href="#cb5-230" tabindex="-1"></a></span>
+<span id="cb5-231"><a href="#cb5-231" tabindex="-1"></a>running.test.case<span class="fl">.2</span><span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Sample =</span> <span class="fu">as.numeric</span>(<span class="fu">rownames</span>(testing.case<span class="fl">.2</span>)), testing.case<span class="fl">.2</span>)</span>
+<span id="cb5-232"><a href="#cb5-232" tabindex="-1"></a></span>
+<span id="cb5-233"><a href="#cb5-233" tabindex="-1"></a>running.test.case<span class="fl">.3</span><span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">Sample =</span> <span class="fu">as.numeric</span>(<span class="fu">rownames</span>(testing.case<span class="fl">.3</span>)), testing.case<span class="fl">.3</span>)</span>
+<span id="cb5-234"><a href="#cb5-234" tabindex="-1"></a></span>
+<span id="cb5-235"><a href="#cb5-235" tabindex="-1"></a>testing.case.<span class="fl">2.</span>log1p <span class="ot">&lt;-</span> <span class="fu">GO_analysis_surprisal_analysis</span>(<span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.2</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">2</span>]], <span class="fl">0.85</span>, <span class="dv">2</span>, <span class="at">key_type =</span> <span class="st">&quot;ENTREZID&quot;</span>, <span class="at">flip =</span> <span class="cn">FALSE</span>, <span class="at">species.db.str =</span>  <span class="st">&quot;org.Mm.eg.db&quot;</span>, <span class="at">top_GO_terms=</span><span class="dv">15</span>)</span>
+<span id="cb5-236"><a href="#cb5-236" tabindex="-1"></a></span>
+<span id="cb5-237"><a href="#cb5-237" tabindex="-1"></a>testing.case.<span class="fl">2.</span>pseudo <span class="ot">&lt;-</span> <span class="fu">GO_analysis_surprisal_analysis</span>(<span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.2</span>, <span class="st">&quot;pseudocount&quot;</span>)[[<span class="dv">2</span>]], <span class="fl">0.85</span>, <span class="dv">2</span>, <span class="at">key_type =</span> <span class="st">&quot;ENTREZID&quot;</span>, <span class="at">flip =</span> <span class="cn">FALSE</span>, <span class="at">species.db.str =</span>  <span class="st">&quot;org.Mm.eg.db&quot;</span>, <span class="at">top_GO_terms=</span><span class="dv">15</span>)</span>
+<span id="cb5-238"><a href="#cb5-238" tabindex="-1"></a></span>
+<span id="cb5-239"><a href="#cb5-239" tabindex="-1"></a></span>
+<span id="cb5-240"><a href="#cb5-240" tabindex="-1"></a></span>
+<span id="cb5-241"><a href="#cb5-241" tabindex="-1"></a></span>
+<span id="cb5-242"><a href="#cb5-242" tabindex="-1"></a></span>
+<span id="cb5-243"><a href="#cb5-243" tabindex="-1"></a><span class="co">#ggplot(testing.case.2.pseudo, aes(x = reorder(Description, -Count), y = Count, fill = p.adjust)) +</span></span>
+<span id="cb5-244"><a href="#cb5-244" tabindex="-1"></a>  <span class="co">#geom_col() +</span></span>
+<span id="cb5-245"><a href="#cb5-245" tabindex="-1"></a>  <span class="co">#coord_flip() +</span></span>
+<span id="cb5-246"><a href="#cb5-246" tabindex="-1"></a>  <span class="co">#scale_fill_gradient(low = &quot;steelblue&quot;, high = &quot;red&quot;) +</span></span>
+<span id="cb5-247"><a href="#cb5-247" tabindex="-1"></a>  <span class="co">#labs(</span></span>
+<span id="cb5-248"><a href="#cb5-248" tabindex="-1"></a>  <span class="co">#  title = &quot;Top 15 Enriched GO Terms&quot;,</span></span>
+<span id="cb5-249"><a href="#cb5-249" tabindex="-1"></a>  <span class="co">#  x = &quot;GO Term&quot;,</span></span>
+<span id="cb5-250"><a href="#cb5-250" tabindex="-1"></a>  <span class="co">#  y = &quot;Gene Count&quot;,</span></span>
+<span id="cb5-251"><a href="#cb5-251" tabindex="-1"></a>  <span class="co">#  fill = &quot;Adj. p-value&quot;</span></span>
+<span id="cb5-252"><a href="#cb5-252" tabindex="-1"></a>  <span class="co">#) +</span></span>
+<span id="cb5-253"><a href="#cb5-253" tabindex="-1"></a>  <span class="co">#theme_minimal(base_size = 14)</span></span>
+<span id="cb5-254"><a href="#cb5-254" tabindex="-1"></a></span>
+<span id="cb5-255"><a href="#cb5-255" tabindex="-1"></a></span>
+<span id="cb5-256"><a href="#cb5-256" tabindex="-1"></a></span>
+<span id="cb5-257"><a href="#cb5-257" tabindex="-1"></a></span>
+<span id="cb5-258"><a href="#cb5-258" tabindex="-1"></a></span>
+<span id="cb5-259"><a href="#cb5-259" tabindex="-1"></a><span class="co">#Jaccard similarity</span></span>
+<span id="cb5-260"><a href="#cb5-260" tabindex="-1"></a></span>
+<span id="cb5-261"><a href="#cb5-261" tabindex="-1"></a></span>
+<span id="cb5-262"><a href="#cb5-262" tabindex="-1"></a>extreme_pct_lambda <span class="ot">&lt;-</span> <span class="cf">function</span>(sa_mat, <span class="at">lambda_col =</span> <span class="st">&quot;lambda_1&quot;</span>, <span class="at">p =</span> <span class="fl">0.05</span>) {</span>
+<span id="cb5-263"><a href="#cb5-263" tabindex="-1"></a>  <span class="fu">stopifnot</span>(lambda_col <span class="sc">%in%</span> <span class="fu">colnames</span>(sa_mat))</span>
+<span id="cb5-264"><a href="#cb5-264" tabindex="-1"></a>  v <span class="ot">&lt;-</span> sa_mat[, lambda_col]</span>
+<span id="cb5-265"><a href="#cb5-265" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(v)</span>
+<span id="cb5-266"><a href="#cb5-266" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="dv">1</span>, <span class="fu">ceiling</span>(p <span class="sc">*</span> n))</span>
+<span id="cb5-267"><a href="#cb5-267" tabindex="-1"></a></span>
+<span id="cb5-268"><a href="#cb5-268" tabindex="-1"></a></span>
+<span id="cb5-269"><a href="#cb5-269" tabindex="-1"></a>  top_ids <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(v, <span class="at">decreasing =</span> <span class="cn">TRUE</span>))[<span class="fu">seq_len</span>(k)]</span>
+<span id="cb5-270"><a href="#cb5-270" tabindex="-1"></a>  bot_ids <span class="ot">&lt;-</span> <span class="fu">names</span>(<span class="fu">sort</span>(v, <span class="at">decreasing =</span> <span class="cn">FALSE</span>))[<span class="fu">seq_len</span>(k)]</span>
+<span id="cb5-271"><a href="#cb5-271" tabindex="-1"></a></span>
+<span id="cb5-272"><a href="#cb5-272" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">sort</span>(<span class="fu">unique</span>(<span class="fu">c</span>(top_ids, bot_ids))))</span>
+<span id="cb5-273"><a href="#cb5-273" tabindex="-1"></a>}</span>
+<span id="cb5-274"><a href="#cb5-274" tabindex="-1"></a></span>
+<span id="cb5-275"><a href="#cb5-275" tabindex="-1"></a></span>
+<span id="cb5-276"><a href="#cb5-276" tabindex="-1"></a></span>
+<span id="cb5-277"><a href="#cb5-277" tabindex="-1"></a>sa1_log1p <span class="ot">&lt;-</span> <span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.1</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">2</span>]]</span>
+<span id="cb5-278"><a href="#cb5-278" tabindex="-1"></a>sa1_pc    <span class="ot">&lt;-</span> <span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.1</span>, <span class="st">&quot;pseudocount&quot;</span>)[[<span class="dv">2</span>]]</span>
+<span id="cb5-279"><a href="#cb5-279" tabindex="-1"></a></span>
+<span id="cb5-280"><a href="#cb5-280" tabindex="-1"></a></span>
+<span id="cb5-281"><a href="#cb5-281" tabindex="-1"></a>sa2_log1p <span class="ot">&lt;-</span> <span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.2</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">2</span>]]</span>
+<span id="cb5-282"><a href="#cb5-282" tabindex="-1"></a>sa2_pc    <span class="ot">&lt;-</span> <span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.2</span>, <span class="st">&quot;pseudocount&quot;</span>)[[<span class="dv">2</span>]]</span>
+<span id="cb5-283"><a href="#cb5-283" tabindex="-1"></a></span>
+<span id="cb5-284"><a href="#cb5-284" tabindex="-1"></a>sa3_log1p <span class="ot">&lt;-</span> <span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.3</span>, <span class="st">&quot;log1p&quot;</span>)[[<span class="dv">2</span>]]</span>
+<span id="cb5-285"><a href="#cb5-285" tabindex="-1"></a>sa3_pc    <span class="ot">&lt;-</span> <span class="fu">surprisal_analysis</span>(running.test.case<span class="fl">.3</span>, <span class="st">&quot;pseudocount&quot;</span>)[[<span class="dv">2</span>]]</span>
+<span id="cb5-286"><a href="#cb5-286" tabindex="-1"></a></span>
+<span id="cb5-287"><a href="#cb5-287" tabindex="-1"></a></span>
+<span id="cb5-288"><a href="#cb5-288" tabindex="-1"></a>set1_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa1_log1p, <span class="st">&quot;lambda_1&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-289"><a href="#cb5-289" tabindex="-1"></a>set1_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa1_pc,    <span class="st">&quot;lambda_1&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-290"><a href="#cb5-290" tabindex="-1"></a></span>
+<span id="cb5-291"><a href="#cb5-291" tabindex="-1"></a>set2_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa2_log1p, <span class="st">&quot;lambda_1&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-292"><a href="#cb5-292" tabindex="-1"></a>set2_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa2_pc,    <span class="st">&quot;lambda_1&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-293"><a href="#cb5-293" tabindex="-1"></a></span>
+<span id="cb5-294"><a href="#cb5-294" tabindex="-1"></a>set3_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa3_log1p, <span class="st">&quot;lambda_1&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-295"><a href="#cb5-295" tabindex="-1"></a>set3_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa3_pc,    <span class="st">&quot;lambda_1&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-296"><a href="#cb5-296" tabindex="-1"></a></span>
+<span id="cb5-297"><a href="#cb5-297" tabindex="-1"></a>sets <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-298"><a href="#cb5-298" tabindex="-1"></a>  <span class="st">`</span><span class="at">Raw-log1p</span><span class="st">`</span>        <span class="ot">=</span> set1_log1p,</span>
+<span id="cb5-299"><a href="#cb5-299" tabindex="-1"></a>  <span class="st">`</span><span class="at">Raw-pseudocount</span><span class="st">`</span>  <span class="ot">=</span> set1_pc,</span>
+<span id="cb5-300"><a href="#cb5-300" tabindex="-1"></a>  <span class="st">`</span><span class="at">FPKM-log1p</span><span class="st">`</span>       <span class="ot">=</span> set2_log1p,</span>
+<span id="cb5-301"><a href="#cb5-301" tabindex="-1"></a>  <span class="st">`</span><span class="at">FPKM-pseudocount</span><span class="st">`</span> <span class="ot">=</span> set2_pc,</span>
+<span id="cb5-302"><a href="#cb5-302" tabindex="-1"></a>  <span class="st">`</span><span class="at">TPM-log1p</span><span class="st">`</span>        <span class="ot">=</span> set3_log1p,</span>
+<span id="cb5-303"><a href="#cb5-303" tabindex="-1"></a>  <span class="st">`</span><span class="at">TPM-pseudocount</span><span class="st">`</span>  <span class="ot">=</span> set3_pc</span>
+<span id="cb5-304"><a href="#cb5-304" tabindex="-1"></a>)</span>
+<span id="cb5-305"><a href="#cb5-305" tabindex="-1"></a></span>
+<span id="cb5-306"><a href="#cb5-306" tabindex="-1"></a></span>
+<span id="cb5-307"><a href="#cb5-307" tabindex="-1"></a>pairwise_matrix <span class="ot">&lt;-</span> <span class="cf">function</span>(sets, fun) {</span>
+<span id="cb5-308"><a href="#cb5-308" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(sets)</span>
+<span id="cb5-309"><a href="#cb5-309" tabindex="-1"></a>  M <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, n, n, <span class="at">dimnames =</span> <span class="fu">list</span>(<span class="fu">names</span>(sets), <span class="fu">names</span>(sets)))</span>
+<span id="cb5-310"><a href="#cb5-310" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(n)) <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">seq_len</span>(n)) M[i, j] <span class="ot">&lt;-</span> <span class="fu">fun</span>(sets[[i]], sets[[j]])</span>
+<span id="cb5-311"><a href="#cb5-311" tabindex="-1"></a>  M</span>
+<span id="cb5-312"><a href="#cb5-312" tabindex="-1"></a>}</span>
+<span id="cb5-313"><a href="#cb5-313" tabindex="-1"></a></span>
+<span id="cb5-314"><a href="#cb5-314" tabindex="-1"></a>overlap_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) <span class="fu">length</span>(<span class="fu">intersect</span>(a, b))</span>
+<span id="cb5-315"><a href="#cb5-315" tabindex="-1"></a>jaccard_fun <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb5-316"><a href="#cb5-316" tabindex="-1"></a>  inter <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">intersect</span>(a, b)); uni <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">union</span>(a, b))</span>
+<span id="cb5-317"><a href="#cb5-317" tabindex="-1"></a>  <span class="cf">if</span> (uni <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="cn">NA_real_</span>) <span class="cf">else</span> inter <span class="sc">/</span> uni</span>
+<span id="cb5-318"><a href="#cb5-318" tabindex="-1"></a>}</span>
+<span id="cb5-319"><a href="#cb5-319" tabindex="-1"></a></span>
+<span id="cb5-320"><a href="#cb5-320" tabindex="-1"></a>overlap_mat <span class="ot">&lt;-</span> <span class="fu">pairwise_matrix</span>(sets, overlap_fun)</span>
+<span id="cb5-321"><a href="#cb5-321" tabindex="-1"></a><span class="fu">diag</span>(overlap_mat) <span class="ot">&lt;-</span> <span class="fu">vapply</span>(sets, length, <span class="fu">integer</span>(<span class="dv">1</span>))</span>
+<span id="cb5-322"><a href="#cb5-322" tabindex="-1"></a>jaccard_mat <span class="ot">&lt;-</span> <span class="fu">pairwise_matrix</span>(sets, jaccard_fun)</span>
+<span id="cb5-323"><a href="#cb5-323" tabindex="-1"></a></span>
+<span id="cb5-324"><a href="#cb5-324" tabindex="-1"></a></span>
+<span id="cb5-325"><a href="#cb5-325" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
+<span id="cb5-326"><a href="#cb5-326" tabindex="-1"></a>  jaccard_mat,</span>
+<span id="cb5-327"><a href="#cb5-327" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">TeX</span>(<span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of $</span><span class="sc">\\</span><span class="st">lambda_0$)&quot;</span>),</span>
+<span id="cb5-328"><a href="#cb5-328" tabindex="-1"></a>  <span class="at">display_numbers =</span> <span class="cn">TRUE</span>, <span class="at">number_format =</span> <span class="st">&quot;%.2f&quot;</span>,</span>
+<span id="cb5-329"><a href="#cb5-329" tabindex="-1"></a>  <span class="at">fontsize_row =</span> <span class="dv">10</span>, <span class="at">fontsize_col =</span> <span class="dv">10</span>, <span class="at">border_color =</span> <span class="cn">NA</span>,</span>
+<span id="cb5-330"><a href="#cb5-330" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;#1B3C53&quot;</span>, <span class="st">&quot;#456882&quot;</span>, <span class="st">&quot;#91C8E4&quot;</span>))(<span class="dv">100</span>)</span>
+<span id="cb5-331"><a href="#cb5-331" tabindex="-1"></a>)</span>
+<span id="cb5-332"><a href="#cb5-332" tabindex="-1"></a></span>
+<span id="cb5-333"><a href="#cb5-333" tabindex="-1"></a></span>
+<span id="cb5-334"><a href="#cb5-334" tabindex="-1"></a>set1_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa1_log1p, <span class="st">&quot;lambda_2&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-335"><a href="#cb5-335" tabindex="-1"></a>set1_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa1_pc,    <span class="st">&quot;lambda_2&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-336"><a href="#cb5-336" tabindex="-1"></a></span>
+<span id="cb5-337"><a href="#cb5-337" tabindex="-1"></a>set2_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa2_log1p, <span class="st">&quot;lambda_2&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-338"><a href="#cb5-338" tabindex="-1"></a>set2_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa2_pc,    <span class="st">&quot;lambda_2&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-339"><a href="#cb5-339" tabindex="-1"></a></span>
+<span id="cb5-340"><a href="#cb5-340" tabindex="-1"></a>set3_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa3_log1p, <span class="st">&quot;lambda_2&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-341"><a href="#cb5-341" tabindex="-1"></a>set3_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa3_pc,    <span class="st">&quot;lambda_2&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-342"><a href="#cb5-342" tabindex="-1"></a></span>
+<span id="cb5-343"><a href="#cb5-343" tabindex="-1"></a>sets <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-344"><a href="#cb5-344" tabindex="-1"></a>  <span class="st">`</span><span class="at">Raw-log1p</span><span class="st">`</span>        <span class="ot">=</span> set1_log1p,</span>
+<span id="cb5-345"><a href="#cb5-345" tabindex="-1"></a>  <span class="st">`</span><span class="at">Raw-pseudocount</span><span class="st">`</span>  <span class="ot">=</span> set1_pc,</span>
+<span id="cb5-346"><a href="#cb5-346" tabindex="-1"></a>  <span class="st">`</span><span class="at">FPKM-log1p</span><span class="st">`</span>       <span class="ot">=</span> set2_log1p,</span>
+<span id="cb5-347"><a href="#cb5-347" tabindex="-1"></a>  <span class="st">`</span><span class="at">FPKM-pseudocount</span><span class="st">`</span> <span class="ot">=</span> set2_pc,</span>
+<span id="cb5-348"><a href="#cb5-348" tabindex="-1"></a>  <span class="st">`</span><span class="at">TPM-log1p</span><span class="st">`</span>        <span class="ot">=</span> set3_log1p,</span>
+<span id="cb5-349"><a href="#cb5-349" tabindex="-1"></a>  <span class="st">`</span><span class="at">TPM-pseudocount</span><span class="st">`</span>  <span class="ot">=</span> set3_pc</span>
+<span id="cb5-350"><a href="#cb5-350" tabindex="-1"></a>)</span>
+<span id="cb5-351"><a href="#cb5-351" tabindex="-1"></a></span>
+<span id="cb5-352"><a href="#cb5-352" tabindex="-1"></a></span>
+<span id="cb5-353"><a href="#cb5-353" tabindex="-1"></a>overlap_mat <span class="ot">&lt;-</span> <span class="fu">pairwise_matrix</span>(sets, overlap_fun)</span>
+<span id="cb5-354"><a href="#cb5-354" tabindex="-1"></a><span class="fu">diag</span>(overlap_mat) <span class="ot">&lt;-</span> <span class="fu">vapply</span>(sets, length, <span class="fu">integer</span>(<span class="dv">1</span>))</span>
+<span id="cb5-355"><a href="#cb5-355" tabindex="-1"></a>jaccard_mat <span class="ot">&lt;-</span> <span class="fu">pairwise_matrix</span>(sets, jaccard_fun)</span>
+<span id="cb5-356"><a href="#cb5-356" tabindex="-1"></a></span>
+<span id="cb5-357"><a href="#cb5-357" tabindex="-1"></a></span>
+<span id="cb5-358"><a href="#cb5-358" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
+<span id="cb5-359"><a href="#cb5-359" tabindex="-1"></a>  jaccard_mat,</span>
+<span id="cb5-360"><a href="#cb5-360" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">TeX</span>(<span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of $</span><span class="sc">\\</span><span class="st">lambda_1$)&quot;</span>),</span>
+<span id="cb5-361"><a href="#cb5-361" tabindex="-1"></a>  <span class="at">display_numbers =</span> <span class="cn">TRUE</span>, <span class="at">number_format =</span> <span class="st">&quot;%.2f&quot;</span>,</span>
+<span id="cb5-362"><a href="#cb5-362" tabindex="-1"></a>  <span class="at">fontsize_row =</span> <span class="dv">10</span>, <span class="at">fontsize_col =</span> <span class="dv">10</span>, <span class="at">border_color =</span> <span class="cn">NA</span>,</span>
+<span id="cb5-363"><a href="#cb5-363" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;#1B3C53&quot;</span>, <span class="st">&quot;#456882&quot;</span>, <span class="st">&quot;#91C8E4&quot;</span>))(<span class="dv">100</span>)</span>
+<span id="cb5-364"><a href="#cb5-364" tabindex="-1"></a>)</span>
+<span id="cb5-365"><a href="#cb5-365" tabindex="-1"></a></span>
+<span id="cb5-366"><a href="#cb5-366" tabindex="-1"></a></span>
+<span id="cb5-367"><a href="#cb5-367" tabindex="-1"></a></span>
+<span id="cb5-368"><a href="#cb5-368" tabindex="-1"></a>set1_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa1_log1p, <span class="st">&quot;lambda_3&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-369"><a href="#cb5-369" tabindex="-1"></a>set1_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa1_pc,    <span class="st">&quot;lambda_3&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-370"><a href="#cb5-370" tabindex="-1"></a></span>
+<span id="cb5-371"><a href="#cb5-371" tabindex="-1"></a>set2_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa2_log1p, <span class="st">&quot;lambda_3&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-372"><a href="#cb5-372" tabindex="-1"></a>set2_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa2_pc,    <span class="st">&quot;lambda_3&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-373"><a href="#cb5-373" tabindex="-1"></a></span>
+<span id="cb5-374"><a href="#cb5-374" tabindex="-1"></a>set3_log1p <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa3_log1p, <span class="st">&quot;lambda_3&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-375"><a href="#cb5-375" tabindex="-1"></a>set3_pc    <span class="ot">&lt;-</span> <span class="fu">extreme_pct_lambda</span>(sa3_pc,    <span class="st">&quot;lambda_3&quot;</span>, <span class="fl">0.05</span>)</span>
+<span id="cb5-376"><a href="#cb5-376" tabindex="-1"></a></span>
+<span id="cb5-377"><a href="#cb5-377" tabindex="-1"></a>sets <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb5-378"><a href="#cb5-378" tabindex="-1"></a>  <span class="st">`</span><span class="at">Raw-log1p</span><span class="st">`</span>        <span class="ot">=</span> set1_log1p,</span>
+<span id="cb5-379"><a href="#cb5-379" tabindex="-1"></a>  <span class="st">`</span><span class="at">Raw-pseudocount</span><span class="st">`</span>  <span class="ot">=</span> set1_pc,</span>
+<span id="cb5-380"><a href="#cb5-380" tabindex="-1"></a>  <span class="st">`</span><span class="at">FPKM-log1p</span><span class="st">`</span>       <span class="ot">=</span> set2_log1p,</span>
+<span id="cb5-381"><a href="#cb5-381" tabindex="-1"></a>  <span class="st">`</span><span class="at">FPKM-pseudocount</span><span class="st">`</span> <span class="ot">=</span> set2_pc,</span>
+<span id="cb5-382"><a href="#cb5-382" tabindex="-1"></a>  <span class="st">`</span><span class="at">TPM-log1p</span><span class="st">`</span>        <span class="ot">=</span> set3_log1p,</span>
+<span id="cb5-383"><a href="#cb5-383" tabindex="-1"></a>  <span class="st">`</span><span class="at">TPM-pseudocount</span><span class="st">`</span>  <span class="ot">=</span> set3_pc</span>
+<span id="cb5-384"><a href="#cb5-384" tabindex="-1"></a>)</span>
+<span id="cb5-385"><a href="#cb5-385" tabindex="-1"></a></span>
+<span id="cb5-386"><a href="#cb5-386" tabindex="-1"></a></span>
+<span id="cb5-387"><a href="#cb5-387" tabindex="-1"></a>overlap_mat <span class="ot">&lt;-</span> <span class="fu">pairwise_matrix</span>(sets, overlap_fun)</span>
+<span id="cb5-388"><a href="#cb5-388" tabindex="-1"></a><span class="fu">diag</span>(overlap_mat) <span class="ot">&lt;-</span> <span class="fu">vapply</span>(sets, length, <span class="fu">integer</span>(<span class="dv">1</span>))</span>
+<span id="cb5-389"><a href="#cb5-389" tabindex="-1"></a>jaccard_mat <span class="ot">&lt;-</span> <span class="fu">pairwise_matrix</span>(sets, jaccard_fun)</span>
+<span id="cb5-390"><a href="#cb5-390" tabindex="-1"></a></span>
+<span id="cb5-391"><a href="#cb5-391" tabindex="-1"></a></span>
+<span id="cb5-392"><a href="#cb5-392" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
+<span id="cb5-393"><a href="#cb5-393" tabindex="-1"></a>  jaccard_mat,</span>
+<span id="cb5-394"><a href="#cb5-394" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">TeX</span>(<span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of $</span><span class="sc">\\</span><span class="st">lambda_2$)&quot;</span>),</span>
+<span id="cb5-395"><a href="#cb5-395" tabindex="-1"></a>  <span class="at">display_numbers =</span> <span class="cn">TRUE</span>, <span class="at">number_format =</span> <span class="st">&quot;%.2f&quot;</span>,</span>
+<span id="cb5-396"><a href="#cb5-396" tabindex="-1"></a>  <span class="at">fontsize_row =</span> <span class="dv">10</span>, <span class="at">fontsize_col =</span> <span class="dv">10</span>, <span class="at">border_color =</span> <span class="cn">NA</span>,</span>
+<span id="cb5-397"><a href="#cb5-397" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;#1B3C53&quot;</span>, <span class="st">&quot;#456882&quot;</span>, <span class="st">&quot;#91C8E4&quot;</span>))(<span class="dv">100</span>)</span>
+<span id="cb5-398"><a href="#cb5-398" tabindex="-1"></a>)</span></code></pre></div>
+
+</body>
+</html>

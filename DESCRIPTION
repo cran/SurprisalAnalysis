@@ -1,0 +1,23 @@
+Package: SurprisalAnalysis
+Title: Information Theoretic Analysis of Gene Expression Data
+Version: 0.2
+Authors@R: 
+    person("Annice", "Najafi", , "annicenajafi27@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0679-9397"))
+Description: Implements Surprisal analysis for gene expression data such as RNA-seq or microarray experiments. Surprisal analysis is an information-theoretic method that decomposes gene expression data into a baseline state and constraint-associated deviations, capturing coordinated gene expression patterns under different biological conditions. References: Kravchenko-Balasha N. et al. (2014) <doi:10.1371/journal.pone.0108549>. Zadran S. et al. (2014) <doi:10.1073/pnas.1414714111>. Su Y. et al. (2019) <doi:10.1371/journal.pcbi.1007034>. Bogaert K. A. et al. (2018) <doi:10.1371/journal.pone.0195142>.
+License: MIT + file LICENSE
+Encoding: UTF-8
+RoxygenNote: 7.3.2
+Suggests: knitr, rmarkdown, pheatmap, peakRAM, data.table
+VignetteBuilder: knitr
+Imports: tidyr, dplyr, matlib, org.Mm.eg.db, org.Hs.eg.db,
+        clusterProfiler, AnnotationDbi, tidyverse, shiny, ggplot2,
+        latex2exp, shinythemes, shinyWidgets, shinyjs, shinycssloaders,
+        patchwork, DT, httpuv
+NeedsCompilation: no
+Packaged: 2025-09-05 19:02:34 UTC; annic
+Author: Annice Najafi [aut, cre] (ORCID:
+    <https://orcid.org/0000-0003-0679-9397>)
+Maintainer: Annice Najafi <annicenajafi27@gmail.com>
+Repository: CRAN
+Date/Publication: 2025-09-10 08:30:13 UTC
