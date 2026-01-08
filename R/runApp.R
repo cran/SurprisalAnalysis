@@ -17,9 +17,7 @@
 #' @importFrom ggplot2 ggplot aes geom_point geom_line scale_x_continuous scale_y_continuous
 #'   labs theme_minimal theme element_blank element_line element_text geom_bar coord_flip
 #'   scale_fill_gradient xlab ylab
-#' @importFrom latex2exp TeX
 #' @importFrom AnnotationDbi mapIds
-#' @import org.Hs.eg.db
 #' @importFrom clusterProfiler enrichGO
 #' @import patchwork
 #' @import shinyWidgets

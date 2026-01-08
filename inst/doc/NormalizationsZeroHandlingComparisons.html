@@ -605,14 +605,9 @@ padding-top: 0px;
 <p>Load libraries</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(SurprisalAnalysis)</span></code></pre></div>
-<pre><code>## 
-
-## 
-
-## </code></pre>
+<pre><code>## </code></pre>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span></code></pre></div>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="fu">library</span>(pheatmap)</span></code></pre></div>
 <p>Let us test the normalization methods here pseudocount vs log1p</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">#&#39; Plot Bland Altman and density plots of the difference between the two zero handling</span></span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="co">#&#39; methods</span></span>
@@ -757,7 +752,7 @@ padding-top: 0px;
 <span id="cb5-77"><a href="#cb5-77" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
 <span id="cb5-78"><a href="#cb5-78" tabindex="-1"></a>  )<span class="sc">+</span></span>
 <span id="cb5-79"><a href="#cb5-79" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
-<span id="cb5-80"><a href="#cb5-80" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_0$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-80"><a href="#cb5-80" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="st">&quot;lambda_0&quot;</span>, <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
 <span id="cb5-81"><a href="#cb5-81" tabindex="-1"></a></span>
 <span id="cb5-82"><a href="#cb5-82" tabindex="-1"></a></span>
 <span id="cb5-83"><a href="#cb5-83" tabindex="-1"></a>baseline.pseudo</span>
@@ -784,7 +779,7 @@ padding-top: 0px;
 <span id="cb5-104"><a href="#cb5-104" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
 <span id="cb5-105"><a href="#cb5-105" tabindex="-1"></a>  )<span class="sc">+</span></span>
 <span id="cb5-106"><a href="#cb5-106" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
-<span id="cb5-107"><a href="#cb5-107" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_1$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-107"><a href="#cb5-107" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="st">&quot;lambda_1&quot;</span>, <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
 <span id="cb5-108"><a href="#cb5-108" tabindex="-1"></a></span>
 <span id="cb5-109"><a href="#cb5-109" tabindex="-1"></a></span>
 <span id="cb5-110"><a href="#cb5-110" tabindex="-1"></a>lambda_1.pseudo</span>
@@ -811,7 +806,7 @@ padding-top: 0px;
 <span id="cb5-131"><a href="#cb5-131" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
 <span id="cb5-132"><a href="#cb5-132" tabindex="-1"></a>  )<span class="sc">+</span></span>
 <span id="cb5-133"><a href="#cb5-133" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
-<span id="cb5-134"><a href="#cb5-134" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_2$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-134"><a href="#cb5-134" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="st">&quot;lambda_2&quot;</span>, <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
 <span id="cb5-135"><a href="#cb5-135" tabindex="-1"></a></span>
 <span id="cb5-136"><a href="#cb5-136" tabindex="-1"></a></span>
 <span id="cb5-137"><a href="#cb5-137" tabindex="-1"></a>lambda_2.pseudo</span>
@@ -839,7 +834,7 @@ padding-top: 0px;
 <span id="cb5-159"><a href="#cb5-159" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
 <span id="cb5-160"><a href="#cb5-160" tabindex="-1"></a>  )<span class="sc">+</span></span>
 <span id="cb5-161"><a href="#cb5-161" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
-<span id="cb5-162"><a href="#cb5-162" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_0$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-162"><a href="#cb5-162" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="st">&quot;lambda_0&quot;</span>, <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
 <span id="cb5-163"><a href="#cb5-163" tabindex="-1"></a></span>
 <span id="cb5-164"><a href="#cb5-164" tabindex="-1"></a></span>
 <span id="cb5-165"><a href="#cb5-165" tabindex="-1"></a>baseline.log1p</span>
@@ -866,7 +861,7 @@ padding-top: 0px;
 <span id="cb5-186"><a href="#cb5-186" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
 <span id="cb5-187"><a href="#cb5-187" tabindex="-1"></a>  )<span class="sc">+</span></span>
 <span id="cb5-188"><a href="#cb5-188" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
-<span id="cb5-189"><a href="#cb5-189" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_1$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-189"><a href="#cb5-189" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="st">&quot;lambda_1&quot;</span>, <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
 <span id="cb5-190"><a href="#cb5-190" tabindex="-1"></a></span>
 <span id="cb5-191"><a href="#cb5-191" tabindex="-1"></a></span>
 <span id="cb5-192"><a href="#cb5-192" tabindex="-1"></a>lambda_1.log1p</span>
@@ -894,7 +889,7 @@ padding-top: 0px;
 <span id="cb5-214"><a href="#cb5-214" tabindex="-1"></a>    <span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>)</span>
 <span id="cb5-215"><a href="#cb5-215" tabindex="-1"></a>  )<span class="sc">+</span></span>
 <span id="cb5-216"><a href="#cb5-216" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">&quot;Raw&quot;</span><span class="ot">=</span><span class="st">&quot;#9ECAD6&quot;</span>, <span class="st">&quot;FPKM Normalized&quot;</span> <span class="ot">=</span> <span class="st">&quot;#4A9782&quot;</span>,<span class="st">&quot;TPM Normalized&quot;</span><span class="ot">=</span><span class="st">&quot;#004030&quot;</span> ))<span class="sc">+</span></span>
-<span id="cb5-217"><a href="#cb5-217" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="fu">TeX</span>(<span class="st">&quot;$</span><span class="sc">\\</span><span class="st">lambda_2$&quot;</span>), <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
+<span id="cb5-217"><a href="#cb5-217" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x=</span><span class="st">&quot;Sample&quot;</span>, <span class="at">title=</span><span class="st">&quot;lambda_2&quot;</span>, <span class="at">y=</span><span class="st">&quot;Value&quot;</span>,<span class="at">colour=</span><span class="st">&quot;Normalization&quot;</span>)</span>
 <span id="cb5-218"><a href="#cb5-218" tabindex="-1"></a></span>
 <span id="cb5-219"><a href="#cb5-219" tabindex="-1"></a></span>
 <span id="cb5-220"><a href="#cb5-220" tabindex="-1"></a>lambda_2.log1p</span>
@@ -1004,7 +999,7 @@ padding-top: 0px;
 <span id="cb5-324"><a href="#cb5-324" tabindex="-1"></a></span>
 <span id="cb5-325"><a href="#cb5-325" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
 <span id="cb5-326"><a href="#cb5-326" tabindex="-1"></a>  jaccard_mat,</span>
-<span id="cb5-327"><a href="#cb5-327" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">TeX</span>(<span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of $</span><span class="sc">\\</span><span class="st">lambda_0$)&quot;</span>),</span>
+<span id="cb5-327"><a href="#cb5-327" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of lambda_0)&quot;</span>,</span>
 <span id="cb5-328"><a href="#cb5-328" tabindex="-1"></a>  <span class="at">display_numbers =</span> <span class="cn">TRUE</span>, <span class="at">number_format =</span> <span class="st">&quot;%.2f&quot;</span>,</span>
 <span id="cb5-329"><a href="#cb5-329" tabindex="-1"></a>  <span class="at">fontsize_row =</span> <span class="dv">10</span>, <span class="at">fontsize_col =</span> <span class="dv">10</span>, <span class="at">border_color =</span> <span class="cn">NA</span>,</span>
 <span id="cb5-330"><a href="#cb5-330" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;#1B3C53&quot;</span>, <span class="st">&quot;#456882&quot;</span>, <span class="st">&quot;#91C8E4&quot;</span>))(<span class="dv">100</span>)</span>
@@ -1037,7 +1032,7 @@ padding-top: 0px;
 <span id="cb5-357"><a href="#cb5-357" tabindex="-1"></a></span>
 <span id="cb5-358"><a href="#cb5-358" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
 <span id="cb5-359"><a href="#cb5-359" tabindex="-1"></a>  jaccard_mat,</span>
-<span id="cb5-360"><a href="#cb5-360" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">TeX</span>(<span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of $</span><span class="sc">\\</span><span class="st">lambda_1$)&quot;</span>),</span>
+<span id="cb5-360"><a href="#cb5-360" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of lambda_1)&quot;</span>,</span>
 <span id="cb5-361"><a href="#cb5-361" tabindex="-1"></a>  <span class="at">display_numbers =</span> <span class="cn">TRUE</span>, <span class="at">number_format =</span> <span class="st">&quot;%.2f&quot;</span>,</span>
 <span id="cb5-362"><a href="#cb5-362" tabindex="-1"></a>  <span class="at">fontsize_row =</span> <span class="dv">10</span>, <span class="at">fontsize_col =</span> <span class="dv">10</span>, <span class="at">border_color =</span> <span class="cn">NA</span>,</span>
 <span id="cb5-363"><a href="#cb5-363" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;#1B3C53&quot;</span>, <span class="st">&quot;#456882&quot;</span>, <span class="st">&quot;#91C8E4&quot;</span>))(<span class="dv">100</span>)</span>
@@ -1071,7 +1066,7 @@ padding-top: 0px;
 <span id="cb5-391"><a href="#cb5-391" tabindex="-1"></a></span>
 <span id="cb5-392"><a href="#cb5-392" tabindex="-1"></a>pheatmap<span class="sc">::</span><span class="fu">pheatmap</span>(</span>
 <span id="cb5-393"><a href="#cb5-393" tabindex="-1"></a>  jaccard_mat,</span>
-<span id="cb5-394"><a href="#cb5-394" tabindex="-1"></a>  <span class="at">main =</span> <span class="fu">TeX</span>(<span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of $</span><span class="sc">\\</span><span class="st">lambda_2$)&quot;</span>),</span>
+<span id="cb5-394"><a href="#cb5-394" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">&quot;Jaccard similarity (Top &amp; Bottom 5% of lambda_2)&quot;</span>,</span>
 <span id="cb5-395"><a href="#cb5-395" tabindex="-1"></a>  <span class="at">display_numbers =</span> <span class="cn">TRUE</span>, <span class="at">number_format =</span> <span class="st">&quot;%.2f&quot;</span>,</span>
 <span id="cb5-396"><a href="#cb5-396" tabindex="-1"></a>  <span class="at">fontsize_row =</span> <span class="dv">10</span>, <span class="at">fontsize_col =</span> <span class="dv">10</span>, <span class="at">border_color =</span> <span class="cn">NA</span>,</span>
 <span id="cb5-397"><a href="#cb5-397" tabindex="-1"></a>  <span class="at">color =</span> <span class="fu">colorRampPalette</span>(<span class="fu">c</span>(<span class="st">&quot;#1B3C53&quot;</span>, <span class="st">&quot;#456882&quot;</span>, <span class="st">&quot;#91C8E4&quot;</span>))(<span class="dv">100</span>)</span>

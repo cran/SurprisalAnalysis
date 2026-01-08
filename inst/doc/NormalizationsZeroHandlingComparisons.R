@@ -3,7 +3,6 @@ library(ggplot2)
 library(SurprisalAnalysis)
 library(data.table)
 library(pheatmap)
-library(latex2exp)
 
 ## -----------------------------------------------------------------------------
 
@@ -152,7 +151,7 @@ plot.norm.diffs <- function(X, pc){
 #     text = element_text(size = 18)
 #   )+
 #   scale_color_manual(values=c("Raw"="#9ECAD6", "FPKM Normalized" = "#4A9782","TPM Normalized"="#004030" ))+
-#   labs(x="Sample", title=TeX("$\\lambda_0$"), y="Value",colour="Normalization")
+#   labs(x="Sample", title="lambda_0", y="Value",colour="Normalization")
 # 
 # 
 # baseline.pseudo
@@ -179,7 +178,7 @@ plot.norm.diffs <- function(X, pc){
 #     text = element_text(size = 18)
 #   )+
 #   scale_color_manual(values=c("Raw"="#9ECAD6", "FPKM Normalized" = "#4A9782","TPM Normalized"="#004030" ))+
-#   labs(x="Sample", title=TeX("$\\lambda_1$"), y="Value",colour="Normalization")
+#   labs(x="Sample", title="lambda_1", y="Value",colour="Normalization")
 # 
 # 
 # lambda_1.pseudo
@@ -206,7 +205,7 @@ plot.norm.diffs <- function(X, pc){
 #     text = element_text(size = 18)
 #   )+
 #   scale_color_manual(values=c("Raw"="#9ECAD6", "FPKM Normalized" = "#4A9782","TPM Normalized"="#004030" ))+
-#   labs(x="Sample", title=TeX("$\\lambda_2$"), y="Value",colour="Normalization")
+#   labs(x="Sample", title="lambda_2", y="Value",colour="Normalization")
 # 
 # 
 # lambda_2.pseudo
@@ -234,7 +233,7 @@ plot.norm.diffs <- function(X, pc){
 #     text = element_text(size = 18)
 #   )+
 #   scale_color_manual(values=c("Raw"="#9ECAD6", "FPKM Normalized" = "#4A9782","TPM Normalized"="#004030" ))+
-#   labs(x="Sample", title=TeX("$\\lambda_0$"), y="Value",colour="Normalization")
+#   labs(x="Sample", title="lambda_0", y="Value",colour="Normalization")
 # 
 # 
 # baseline.log1p
@@ -261,7 +260,7 @@ plot.norm.diffs <- function(X, pc){
 #     text = element_text(size = 18)
 #   )+
 #   scale_color_manual(values=c("Raw"="#9ECAD6", "FPKM Normalized" = "#4A9782","TPM Normalized"="#004030" ))+
-#   labs(x="Sample", title=TeX("$\\lambda_1$"), y="Value",colour="Normalization")
+#   labs(x="Sample", title="lambda_1", y="Value",colour="Normalization")
 # 
 # 
 # lambda_1.log1p
@@ -289,7 +288,7 @@ plot.norm.diffs <- function(X, pc){
 #     text = element_text(size = 18)
 #   )+
 #   scale_color_manual(values=c("Raw"="#9ECAD6", "FPKM Normalized" = "#4A9782","TPM Normalized"="#004030" ))+
-#   labs(x="Sample", title=TeX("$\\lambda_2$"), y="Value",colour="Normalization")
+#   labs(x="Sample", title="lambda_2", y="Value",colour="Normalization")
 # 
 # 
 # lambda_2.log1p
@@ -399,7 +398,7 @@ plot.norm.diffs <- function(X, pc){
 # 
 # pheatmap::pheatmap(
 #   jaccard_mat,
-#   main = TeX("Jaccard similarity (Top & Bottom 5% of $\\lambda_0$)"),
+#   main = "Jaccard similarity (Top & Bottom 5% of lambda_0)",
 #   display_numbers = TRUE, number_format = "%.2f",
 #   fontsize_row = 10, fontsize_col = 10, border_color = NA,
 #   color = colorRampPalette(c("#1B3C53", "#456882", "#91C8E4"))(100)
@@ -432,7 +431,7 @@ plot.norm.diffs <- function(X, pc){
 # 
 # pheatmap::pheatmap(
 #   jaccard_mat,
-#   main = TeX("Jaccard similarity (Top & Bottom 5% of $\\lambda_1$)"),
+#   main = "Jaccard similarity (Top & Bottom 5% of lambda_1)",
 #   display_numbers = TRUE, number_format = "%.2f",
 #   fontsize_row = 10, fontsize_col = 10, border_color = NA,
 #   color = colorRampPalette(c("#1B3C53", "#456882", "#91C8E4"))(100)
@@ -466,7 +465,7 @@ plot.norm.diffs <- function(X, pc){
 # 
 # pheatmap::pheatmap(
 #   jaccard_mat,
-#   main = TeX("Jaccard similarity (Top & Bottom 5% of $\\lambda_2$)"),
+#   main = "Jaccard similarity (Top & Bottom 5% of lambda_2)",
 #   display_numbers = TRUE, number_format = "%.2f",
 #   fontsize_row = 10, fontsize_col = 10, border_color = NA,
 #   color = colorRampPalette(c("#1B3C53", "#456882", "#91C8E4"))(100)

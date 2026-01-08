@@ -132,10 +132,6 @@ surprisal_analysis <- function(input.data, zero.handling = 'pseudocount'){
 #' @param top_GO_terms number of GO terms returns, by default set to 15
 #'
 #' @return dataframe, the important GO terms related to a lambda gene pattern
-#' @import org.Hs.eg.db
-#' @import org.Mm.eg.db
-#' @importFrom AnnotationDbi mapIds
-#' @importFrom clusterProfiler enrichGO
 #' @importFrom stats quantile
 #' @importFrom utils head
 #' @examples
@@ -149,14 +145,17 @@ surprisal_analysis <- function(input.data, zero.handling = 'pseudocount'){
 #' expr.df[1:700,]->expr.df
 #' sa.res <- surprisal_analysis(expr.df, zero.handling = "log1p")
 #' alph.all <- sa.res[[2]]
+#'
+#' #In the example below, replace "none" with either 'org.Hs.eg.db' or 'org.Mm.eg.db'.
 #' \donttest{
+#'
 #' go_top <- GO_analysis_surprisal_analysis(
 #'     transcript_weights = alph.all,
 #'     percentile_GO      = 99,
 #'     lambda_no          = "lambda_1",
 #'     key_type           = "SYMBOL",
 #'     flip               = FALSE,
-#'     species.db.str     = "org.Hs.eg.db",
+#'     species.db.str     = "none",
 #'     ont                = "BP",
 #'     pAdjustMethod      = "BH",
 #'     top_GO_terms       = 15
@@ -180,21 +179,43 @@ GO_analysis_surprisal_analysis <- function(transcript_weights, percentile_GO, la
   values_above_percentile_int <- toupper(rownames(alph_all))[alph_all[,lambda_no] > percentile_int]
 
 
-  if(species.db.str == "org.Hs.eg.db"){
+  if (!species.db.str %in% c("org.Hs.eg.db", "org.Mm.eg.db")) {
 
-  species.db <- org.Hs.eg.db
-
-  }else if(species.db.str == 'org.Mm.eg.db'){
-
-  species.db <- org.Mm.eg.db
-
-  }else{
-    stop('Please enter either "org.Hs.eg.db" or "org.Mm.eg.db".')
+      message("Skipping GO analysis because user entered invalid organism: ", species.db.str, " .")
+      return(data.frame())
   }
 
-  entrez_ids <- tryCatch(mapIds(species.db, keys=values_above_percentile_int,column="ENTREZID",keytype=key_type,multiVals="first"),error=function(e)NULL)
 
-  GO_results <-enrichGO(gene=entrez_ids, OrgDb=species.db,keyType="ENTREZID",ont=ont, pAdjustMethod = pAdjustMethod)
+  needed <- c("AnnotationDbi", "clusterProfiler", species.db.str)
+  missing <- needed[!vapply(needed, requireNamespace, logical(1), quietly = TRUE)]
+  if (length(missing)) {
+    stop(
+      "GO analysis requires Bioconductor packages not installed: ",
+      paste(missing, collapse = ", "),
+      ". Install via BiocManager::install(...).",
+      call. = FALSE
+    )
+  }
+
+
+  species.db <- get(species.db.str, envir = asNamespace(species.db.str))
+
+  entrez_ids <- AnnotationDbi::mapIds(
+    x = species.db,
+    keys = values_above_percentile_int,
+    column = "ENTREZID",
+    keytype = key_type,
+    multiVals = "first"
+  )
+  entrez_ids <- unname(entrez_ids[!is.na(entrez_ids)])
+
+  GO_results <- clusterProfiler::enrichGO(
+    gene = entrez_ids,
+    OrgDb = species.db,
+    keyType = "ENTREZID",
+    ont = ont,
+    pAdjustMethod = pAdjustMethod
+  )
 
   head(GO_results@result, top_GO_terms)->Go.top
 

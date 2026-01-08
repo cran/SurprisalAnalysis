@@ -59,14 +59,17 @@ expr.df <- utils::read.csv(csv.path, check.names = FALSE)
 expr.df[1:700,]->expr.df
 sa.res <- surprisal_analysis(expr.df, zero.handling = "log1p")
 alph.all <- sa.res[[2]]
+
+#In the example below, replace "none" with either 'org.Hs.eg.db' or 'org.Mm.eg.db'.
 \donttest{
+
 go_top <- GO_analysis_surprisal_analysis(
     transcript_weights = alph.all,
     percentile_GO      = 99,
     lambda_no          = "lambda_1",
     key_type           = "SYMBOL",
     flip               = FALSE,
-    species.db.str     = "org.Hs.eg.db",
+    species.db.str     = "none",
     ont                = "BP",
     pAdjustMethod      = "BH",
     top_GO_terms       = 15

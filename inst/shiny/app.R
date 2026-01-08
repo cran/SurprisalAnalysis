@@ -4,14 +4,19 @@ library(shiny)
 library(shinythemes)
 library(shinyjs)
 library(ggplot2)
-library(latex2exp)
 library(DT)
 library(shinycssloaders)
 library(clusterProfiler)
 library(AnnotationDbi)
+library(patchwork)
+if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)) {
+  stop("Package 'org.Hs.eg.db' is required for this Shiny app. Install via BiocManager::install('org.Hs.eg.db')", call. = FALSE)
+}
+if (!requireNamespace("org.Mm.eg.db", quietly = TRUE)) {
+  stop("Package 'org.Mm.eg.db' is required for this Shiny app. Install via BiocManager::install('org.Mm.eg.db')", call. = FALSE)
+}
 library(org.Hs.eg.db)
 library(org.Mm.eg.db)
-library(patchwork)
 
 find_demo_file <- function(fname, pkg = "SurprisalAnalysis") {
   candidates <- c(
@@ -377,7 +382,7 @@ server <- function(input, output, session) {
       geom_line(colour = "#76ABAE", size = 1) +
       scale_x_continuous(breaks = tp, labels = sn) +
       scale_y_continuous(limits = input$y_range0) +
-      labs(x = "Sample", y = TeX("$\\lambda_0$"), tag = 'A') +
+      labs(x = "Sample", y = "lambda_0", tag = 'A') +
       theme_minimal() +
       theme(panel.grid = element_blank(), axis.line = element_line(colour = "black"),
             axis.text = element_text(size = input$tick_size),
@@ -391,7 +396,7 @@ server <- function(input, output, session) {
       geom_line(colour = "#5E898B", size = 1) +
       scale_x_continuous(breaks = df2$x, labels = df2$sample) +
       scale_y_continuous(limits = input$y_range1) +
-      labs(x = "Sample", y = TeX("$\\lambda_1$"), tag = 'B') +
+      labs(x = "Sample", y = "lambda_1", tag = 'B') +
       theme_minimal() +
       theme(panel.grid = element_blank(), axis.line = element_line(colour = "black"),
             axis.text = element_text(size = input$tick_size),
@@ -405,7 +410,7 @@ server <- function(input, output, session) {
       geom_line(colour = "#426061", size = 1) +
       scale_x_continuous(breaks = df3$x, labels = df3$sample) +
       scale_y_continuous(limits = input$y_range2) +
-      labs(x = "Sample", y = TeX("$\\lambda_2$"), tag = 'C') +
+      labs(x = "Sample", y = "lambda_2", tag = 'C') +
       theme_minimal() +
       theme(panel.grid = element_blank(), axis.line = element_line(colour = "black"),
             axis.text = element_text(size = input$tick_size),
@@ -517,9 +522,9 @@ server <- function(input, output, session) {
 
     ggplot(df, aes(x, y)) +
       geom_point(fill = "#76ABAE", color = "#76ABAE", shape = 8) +
-      xlab(TeX("$G_{0i}\\,\\lambda_0$")) +
-      ylab(TeX("$G_{1i}\\,\\lambda_1$")) +
-      labs(title = TeX("Stable state stability")) +
+      xlab("G_0i,lambda_0") +
+      ylab("G_1i,lambda_1") +
+      labs(title = "Stable state stability") +
       theme(panel.background = element_blank(),
             panel.grid.major = element_blank(),
             panel.grid.minor = element_blank(),
