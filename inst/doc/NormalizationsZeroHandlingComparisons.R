@@ -77,7 +77,7 @@ plot.norm.diffs <- function(X, pc){
 # 
 # 
 # 
-# df <- read.table(system.file("extdata", "GSE60450_Lactation-GenewiseCounts.txt", package = "SurprisalAnalysis"),header = TRUE, sep = "\t", check.names = FALSE)
+# df <- read.table(system.file("extdata", "GSE60450_Lactation-GenewiseCounts.txt.gz", package = "SurprisalAnalysis"),header = TRUE, sep = "\t", check.names = FALSE)
 # 
 # 
 # df[,3:ncol(df)]->testing.case.1

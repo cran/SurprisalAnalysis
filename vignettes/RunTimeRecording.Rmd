@@ -1,6 +1,8 @@
 ---
 title: "Run Time Recording"
-output: github_document
+output:
+  rmarkdown::html_vignette:
+    mathjax: null
 vignette: >
   %\VignetteIndexEntry{Run Time Recording}
   %\VignetteEngine{knitr::rmarkdown}

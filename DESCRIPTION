@@ -1,6 +1,6 @@
 Package: SurprisalAnalysis
 Title: Information Theoretic Analysis of Gene Expression Data
-Version: 3.0.0
+Version: 3.0.1
 Authors@R: 
     person("Annice", "Najafi", , "annicenajafi27@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0679-9397"))
@@ -9,15 +9,15 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.3.3
 Suggests: knitr, rmarkdown, pheatmap, peakRAM, data.table, BiocManager,
-        org.Hs.eg.db, org.Mm.eg.db
+        clusterProfiler, AnnotationDbi, org.Hs.eg.db, org.Mm.eg.db,
+        httpuv
 VignetteBuilder: knitr
-Imports: tidyr, dplyr, matlib, tidyverse, clusterProfiler,
-        AnnotationDbi, shiny, ggplot2, shinythemes, shinyWidgets,
-        shinyjs, shinycssloaders, patchwork, DT, httpuv
+Imports: matlib, shiny, ggplot2, shinythemes, shinyjs, shinycssloaders,
+        patchwork, DT
 NeedsCompilation: no
-Packaged: 2026-01-07 21:29:26 UTC; annic
+Packaged: 2026-04-23 02:02:21 UTC; annic
 Author: Annice Najafi [aut, cre] (ORCID:
     <https://orcid.org/0000-0003-0679-9397>)
 Maintainer: Annice Najafi <annicenajafi27@gmail.com>
 Repository: CRAN
-Date/Publication: 2026-01-08 03:30:02 UTC
+Date/Publication: 2026-04-23 05:10:36 UTC

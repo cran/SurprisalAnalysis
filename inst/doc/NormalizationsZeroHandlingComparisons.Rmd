@@ -1,6 +1,8 @@
 ---
 title: "Normalizations Comparisons"
-output: github_document
+output:
+  rmarkdown::html_vignette:
+    mathjax: null
 vignette: >
   %\VignetteIndexEntry{Comparisons of Normalization Methods}
   %\VignetteEngine{knitr::rmarkdown}
@@ -100,7 +102,7 @@ pc <- 1e-6
 
 
 
-df <- read.table(system.file("extdata", "GSE60450_Lactation-GenewiseCounts.txt", package = "SurprisalAnalysis"),header = TRUE, sep = "\t", check.names = FALSE)
+df <- read.table(system.file("extdata", "GSE60450_Lactation-GenewiseCounts.txt.gz", package = "SurprisalAnalysis"),header = TRUE, sep = "\t", check.names = FALSE)
   
 
 df[,3:ncol(df)]->testing.case.1

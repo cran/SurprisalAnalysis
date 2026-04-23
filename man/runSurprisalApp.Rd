@@ -30,7 +30,8 @@ no return value, running the function will launch an application with graphical 
 Launch the SurprisalAnalysis Shiny App
 }
 \examples{
-
-runSurprisalApp(port = httpuv::randomPort(), run = FALSE)
+if (requireNamespace("httpuv", quietly = TRUE)) {
+  runSurprisalApp(port = httpuv::randomPort(), run = FALSE)
+}
 
 }

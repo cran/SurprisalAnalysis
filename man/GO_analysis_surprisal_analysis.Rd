@@ -51,7 +51,7 @@ Perform Gene ontology analysis on a pattern of interest
 \examples{
 
 csv.path <- system.file(
-  "extdata", "helper_T_cell_0_test.csv",
+  "extdata", "helper_T_cell_0_test.csv.gz",
   package = "SurprisalAnalysis"
 )
 

@@ -17,19 +17,13 @@
 #' @importFrom ggplot2 ggplot aes geom_point geom_line scale_x_continuous scale_y_continuous
 #'   labs theme_minimal theme element_blank element_line element_text geom_bar coord_flip
 #'   scale_fill_gradient xlab ylab
-#' @importFrom AnnotationDbi mapIds
-#' @importFrom clusterProfiler enrichGO
 #' @import patchwork
-#' @import shinyWidgets
-#' @import dplyr
-#' @import tidyr
-#' @import tidyverse
-#' @import httpuv
 #' @importFrom stats quantile
 #' @importFrom utils head
 #' @examples
-#'
-#' runSurprisalApp(port = httpuv::randomPort(), run = FALSE)
+#' if (requireNamespace("httpuv", quietly = TRUE)) {
+#'   runSurprisalApp(port = httpuv::randomPort(), run = FALSE)
+#' }
 #'
 #' @export runSurprisalApp
 runSurprisalApp <- function(port      = getOption("shiny.port", 3838),

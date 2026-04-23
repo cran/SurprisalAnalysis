@@ -6,7 +6,7 @@ library(SurprisalAnalysis)
 library(ggplot2)
 
 ## -----------------------------------------------------------------------------
-data <- read.csv(system.file("extdata", "helper_T_cell_0_test.csv", package = "SurprisalAnalysis"), header=TRUE)
+data <- read.csv(system.file("extdata", "helper_T_cell_0_test.csv.gz", package = "SurprisalAnalysis"), header=TRUE)
 results <- surprisal_analysis(data)
 results[[2]]-> transcript_weights
 percentile_GO <- 0.95 #change based on your preference

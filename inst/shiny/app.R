@@ -6,25 +6,30 @@ library(shinyjs)
 library(ggplot2)
 library(DT)
 library(shinycssloaders)
-library(clusterProfiler)
-library(AnnotationDbi)
 library(patchwork)
-if (!requireNamespace("org.Hs.eg.db", quietly = TRUE)) {
-  stop("Package 'org.Hs.eg.db' is required for this Shiny app. Install via BiocManager::install('org.Hs.eg.db')", call. = FALSE)
+
+has_pkg <- function(pkg) requireNamespace(pkg, quietly = TRUE)
+
+go_deps_available <- function(species_db = NULL) {
+  core <- all(vapply(c("clusterProfiler", "AnnotationDbi"), has_pkg, logical(1)))
+  if (!core) return(FALSE)
+  if (is.null(species_db)) return(TRUE)
+  has_pkg(species_db)
 }
-if (!requireNamespace("org.Mm.eg.db", quietly = TRUE)) {
-  stop("Package 'org.Mm.eg.db' is required for this Shiny app. Install via BiocManager::install('org.Mm.eg.db')", call. = FALSE)
+
+missing_go_deps <- function(species_db = NULL) {
+  need <- c("clusterProfiler", "AnnotationDbi")
+  if (!is.null(species_db)) need <- c(need, species_db)
+  need[!vapply(need, has_pkg, logical(1))]
 }
-library(org.Hs.eg.db)
-library(org.Mm.eg.db)
 
 find_demo_file <- function(fname, pkg = "SurprisalAnalysis") {
   candidates <- c(
-    file.path("data", fname),
-    file.path("inst", "shiny", "data", fname),
-    system.file("shiny", "data", fname, package = pkg)
+    system.file("extdata", fname, package = pkg),
+    file.path("inst", "extdata", fname),
+    file.path("data", fname)
   )
-  hit <- candidates[file.exists(candidates)][1]
+  hit <- candidates[nzchar(candidates) & file.exists(candidates)][1]
   if (length(hit) == 0 || is.na(hit)) return(NULL)
   normalizePath(hit, winslash = "/", mustWork = TRUE)
 }
@@ -66,11 +71,16 @@ detect_id_type <- function(id_vec, sample_n = 500, min_conf = 0.20) {
   if (entrez_like >= 0.80) return("Entrez Id")
   regex_hint <- if (sym_like >= 0.80) "Gene Symbol" else NA_character_
 
+  if (!go_deps_available("org.Hs.eg.db")) {
+    return(if (!is.na(regex_hint)) regex_hint else "Gene Symbol")
+  }
+
   keytypes_try <- c(ENSEMBL = "Ensembl", ENTREZID = "Entrez Id",
                     SYMBOL  = "Gene Symbol", PROBEID = "Probe Id")
+  db_hs <- get("org.Hs.eg.db", envir = asNamespace("org.Hs.eg.db"))
   scores <- vapply(names(keytypes_try), function(kt) {
     m <- tryCatch(
-      AnnotationDbi::mapIds(org.Hs.eg.db, keys = x, column = "ENTREZID",
+      AnnotationDbi::mapIds(db_hs, keys = x, column = "ENTREZID",
                             keytype = kt, multiVals = "first"),
       error = function(e) rep(NA_character_, length(x))
     )
@@ -312,19 +322,19 @@ server <- function(input, output, session) {
   }, ignoreInit = TRUE)
 
   observeEvent(input$load_demo, {
-    demo_abs <- find_demo_file("helper_T_cell_0_test.csv")
+    demo_abs <- find_demo_file("helper_T_cell_0_test.csv.gz")
     if (is.null(demo_abs)) {
       showModal(modalDialog(
         title = "Demo file not found",
-        HTML("I looked for <code>helper_T_cell_0_test.csv</code> in:<br>
-             • <code>data/</code><br>
-             • <code>inst/shiny/data/</code><br>
-             • installed package via <code>system.file('shiny/data', ...)</code>"),
+        HTML("I looked for <code>helper_T_cell_0_test.csv.gz</code> in:<br>
+             • installed package via <code>system.file('extdata', ...)</code><br>
+             • <code>inst/extdata/</code><br>
+             • <code>data/</code>"),
         easyClose = TRUE, footer = modalButton("OK")
       ))
       return()
     }
-    simulate_fileinput_display("data_in", "helper_T_cell_0_test.csv", duration_ms = 700)
+    simulate_fileinput_display("data_in", "helper_T_cell_0_test.csv.gz", duration_ms = 700)
     data_path(demo_abs); enable("submit")
     dt_head <- tryCatch(read.csv(demo_abs, row.names = 1,
                                  check.names = FALSE, nrows = 2000),
@@ -444,25 +454,36 @@ server <- function(input, output, session) {
   })
 
   species_db_obj <- reactive({
-    get(input$species_db)
+    pkg <- input$species_db
+    if (!has_pkg(pkg)) return(NULL)
+    get(pkg, envir = asNamespace(pkg))
   })
 
   run_go <- function(a, lambda_idx, percentile, terms_n) {
     if (input$lambda1_check && lambda_idx == 2) a[,2] <- -a[,2]
     ids <- toupper(rownames(a))[a[,lambda_idx] > quantile(a[,lambda_idx], percentile/100)]
     if (length(ids) == 0) { set_warn("No genes passed the percentile cutoff. Try lowering the cutoff or checking the transformation."); return(NULL) }
+    missing_pkgs <- missing_go_deps(input$species_db)
+    if (length(missing_pkgs)) {
+      set_warn(paste0(
+        "GO analysis requires Bioconductor packages not installed: ",
+        paste(missing_pkgs, collapse = ", "),
+        ". Install via BiocManager::install(...)."
+      ))
+      return(NULL)
+    }
     db <- species_db_obj()
     kt <- map_keytype()
     entrez <- tryCatch(
-      mapIds(db, keys = ids, column = "ENTREZID", keytype = kt, multiVals = "first"),
+      AnnotationDbi::mapIds(db, keys = ids, column = "ENTREZID", keytype = kt, multiVals = "first"),
       error = function(e) NA
     )
     if (all(is.na(entrez))) { set_warn("GO mapping failed for the selected ID type and species. Try switching ID type or species."); return(NULL) }
     entrez <- entrez[!is.na(entrez)]
     if (!length(entrez)) { set_warn("No mappable genes for GO analysis after filtering. Try a different ID type, species, or cutoff."); return(NULL) }
     GOres <- tryCatch(
-      enrichGO(gene = entrez, OrgDb = db, keyType = "ENTREZID",
-               ont = input$go_ont, pAdjustMethod = input$padj_method),
+      clusterProfiler::enrichGO(gene = entrez, OrgDb = db, keyType = "ENTREZID",
+                                ont = input$go_ont, pAdjustMethod = input$padj_method),
       error = function(e) e
     )
     if (inherits(GOres, "error")) { set_warn("GO enrichment failed to run. Check the ID type/species and try again."); return(NULL) }
